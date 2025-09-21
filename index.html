@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Día de las Flores Amarillas 🌼</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background: linear-gradient(180deg, #ffe066, #fff7d6);
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.2em;
+      color: #b8860b;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      background: #ffcc00;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: #ffdb4d;
+    }
+
+    .regalo {
+      margin-top: 30px;
+      display: none;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .flores {
+      font-size: 60px;
+      animation: float 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes float {
+      from {transform: translateY(0);}
+      to {transform: translateY(-15px);}
+    }
+  </style>
+</head>
+<body>
+  <h1>🌼 Feliz Día de las Flores Amarillas, Prima 🌼</h1>
+  <button class="btn" onclick="mostrarRegalo()">🎁 Ver Regalo</button>
+
+  <div id="regalo" class="regalo">
+    <div class="flores">🌻🌻🌻🌻🌻</div>
+    <p style="font-size:1.3em; color:#444;">Estas flores son para ti con mucho cariño 💛</p>
+
+    <!-- Audio (puedes cambiar la URL por tu canción en .mp3) -->
+    <audio id="musica" controls autoplay loop>
+      <source src="Accidentally In Love (From Shrek 2 Soundtrack).mp3" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
+  </div>
+
+  <script>
+    function mostrarRegalo(){
+      document.getElementById("regalo").style.display = "block";
+      document.getElementById("musica").play();
+    }
+  </script>
+</body>
+</html>
